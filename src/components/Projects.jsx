@@ -1,21 +1,38 @@
+import { SiFirebase, SiGithub } from "react-icons/si";
+
 const projects = [
   {
     id: 1,
     name: "fashion verse",
     type: "fashion learning website",
     image: fashionVerse,
+    links: [
+      "https://github.com/aburaihan8715/fashionverse-client",
+      "https://github.com/aburaihan8715/fashionverse-server",
+      "https://fashionverse-ffe6b.web.app/",
+    ],
   },
   {
     id: 2,
     name: "taste trove",
     type: "recipe finder website",
     image: tasteTrove,
+    links: [
+      "https://github.com/aburaihan8715/taste-trove-client",
+      "https://github.com/aburaihan8715/taste-trove-server",
+      "https://taste-trove.web.app/",
+    ],
   },
   {
     id: 3,
     name: "toy topia",
     type: "toy selling website",
     image: toyTopia,
+    links: [
+      "https://github.com/aburaihan8715/toytopia-client",
+      "https://github.com/aburaihan8715/toytopia-server",
+      "https://toytopia-client-9e696.web.app/",
+    ],
   },
 ];
 
@@ -45,9 +62,10 @@ const Projects = () => {
 
 export default Projects;
 
+// ==========project card=========
 const ProjectsCard = ({ item }) => {
   return (
-    <div className="card bg-base-100 shadow-xl image-full">
+    <div data-aos="zoom-in" className="card bg-base-500 image-full transition duration-100 hover:shadow-md hover:shadow-white">
       <figure className="">
         <img className="w-full" src={item.image} alt="Shoes" />
       </figure>
@@ -59,6 +77,33 @@ const ProjectsCard = ({ item }) => {
             <Link to={`/project-details/${item.id}`} className="btn btn-outline btn-primary">
               view details
             </Link>
+          </div>
+
+          <div className="flex flex-col gap-2 mt-5">
+            <div className="flex gap-2 justify-center">
+              <a href={item?.links[0]} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-secondary btn-sm">
+                <span className="text-xl text-blue-400">
+                  <SiGithub />
+                </span>
+                <span>client</span>
+              </a>
+
+              <a href={item?.links[1]} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-secondary btn-sm">
+                <span className="text-xl text-blue-400">
+                  <SiGithub />
+                </span>
+                <span>server</span>
+              </a>
+            </div>
+
+            <div>
+              <a href={item?.links[2]} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-secondary btn-sm ">
+                <span className="text-xl text-orange-400">
+                  <SiFirebase />
+                </span>
+                <span>live</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

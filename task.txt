@@ -1,0 +1,9 @@
+
+
+
+
+
+
+// pending task
+1. gallery have to be show see details link
+2. all skills bar have to be changed

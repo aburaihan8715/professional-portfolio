@@ -1,3 +1,4 @@
+import { FaArrowAltCircleDown } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 import personalImage1 from "../../src/assets/images/personal/personal_1.png";
 const Hero = () => {
@@ -29,11 +30,14 @@ const Hero = () => {
                 <br />
                 <span className="text-rose-500">Developer</span>
                 <br />
-                <span> based in BD</span>
+                <span> from BD</span>
               </h1>
 
               <a href="https://drive.google.com/file/d/1hUgu5Q5hMynQQHTTK8_SdShK8-8HSx1D/view?export=download" className="btn btn-primary">
-                download Cv
+                <span>download Cv</span>
+                <span className="animate-bounce w-6 h-6 p-2 text-xl">
+                  <FaArrowAltCircleDown />
+                </span>
               </a>
             </div>
           </div>

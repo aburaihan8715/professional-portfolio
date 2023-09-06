@@ -49,7 +49,7 @@ const Header = () => {
   );
 
   return (
-    <header className="bg-base-200 fixed h-20 top-0 left-0 right-0 z-30 border border-b-slate-500">
+    <header className="bg-base-200 fixed h-20 top-0 left-0 right-0 z-30 shadow-sm shadow-red-300">
       <div className="w-full sm:max-w-6xl mx-auto">
         <div className="navbar">
           <div className="navbar-start">
@@ -63,9 +63,16 @@ const Header = () => {
                 {menus}
               </ul>
             </div>
-            <Link to="/" className="normal-case text-xl">
-              <img className="w-20" src={logo} alt="logo" />
-            </Link>
+
+            {path === "/" ? (
+              <a href="#hero" className="text-xl capitalize ">
+                <img className="w-20" src={logo} alt="logo" />
+              </a>
+            ) : (
+              <Link to="/" className="text-xl capitalize ">
+                <img className="w-20" src={logo} alt="logo" />
+              </Link>
+            )}
           </div>
           <div className="navbar-center hidden lg:flex ml-auto">
             <ul className="menu menu-horizontal px-1">{menus}</ul>

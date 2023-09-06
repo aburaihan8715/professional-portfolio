@@ -3,10 +3,10 @@ import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-base-200 scroll-mt-20 px-4">
+    <section id="contact" className="scroll-mt-20 px-4">
       <div className="max-w-6xl mx-auto py-14">
-        <div className="sm:min-h-screen grid grid-cols-1 sm:grid-cols-2 gap-10 items-center">
-          <div>
+        <div className="h-auto sm:min-h-screen grid grid-cols-1 sm:grid-cols-2 gap-10 items-center">
+          <div data-aos="zoom-in">
             <div className="p-8">
               <img className="w-full opacity-70" src="https://i.ibb.co/sFNLjCd/email.png" alt="" />
             </div>
