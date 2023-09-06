@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
   return (
@@ -43,11 +44,11 @@ const ContactForm = () => {
     e.preventDefault();
 
     //  alert for empty inputs
-    if (!form.current[0].value || !form.current[1].value || !form.current[2].value) return alert("Name, Email and Message are required!");
+    if (!form.current[0].value || !form.current[1].value || !form.current[2].value) return toast.error("Name, Email and Message are required!");
 
     emailjs.sendForm("service_3ligvku", "template_6c2fgql", form.current, "iF2sH_wv3oxbN5Gx4").then(
       (result) => {
-        alert("Message sent successfully!!");
+        toast.success("Message sent successfully!!");
         console.log(result.text);
       },
       (error) => {
@@ -77,6 +78,7 @@ const ContactForm = () => {
           <button type="submit" className="btn btn-primary">
             submit
           </button>
+          <Toaster position="top-center" reverseOrder={true} />
         </div>
       </div>
     </form>
