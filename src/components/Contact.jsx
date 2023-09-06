@@ -20,7 +20,7 @@ const Contact = () => {
                 <p>
                   <span className="text-primary">+088 01718562225 </span>
                   <span>or email </span>
-                  <span className="text-primary">aburaihan8721@gmail.com</span>
+                  <span className="text-primary">aburaihan3331@gmail.com</span>
                 </p>
               </div>
               {/* form */}
