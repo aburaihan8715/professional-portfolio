@@ -13,7 +13,7 @@ const AboutMe = () => {
             <div>
               <h2 className="text-5xl font-bold">About Me</h2>
               <p className="py-6">
-                Hi, This Abu Raihan a dedicated MERN stack developer with a passion for crafting web applications that combine functionality and
+                Hi, This is Abu Raihan a dedicated MERN stack developer with a passion for crafting web applications that combine functionality and
                 aesthetics. I specialize in building robust web applications using the MERN stack, leveraging my proficiency in MongoDB, Express js,
                 React js, and Node js. I am deeply passionate about web development and constantly seek opportunities to expand my knowledge. In my
                 free time, I contribute to open-source projects and experiment with new technologies. I am a collaborative team player who values
